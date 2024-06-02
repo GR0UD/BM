@@ -3,41 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bruh</title>
+    <title>Burning Man - Contact</title>
     <link rel="stylesheet" href="assets/css/contact.css" />
     <link rel="icon" type="image/png" href="assets/img/icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <section id="hero">
-      <nav>
-        <ul class="content-width">
-          <li><img id="logo" src="assets/img/burningman-logo.png" /></li>
-          <li><a href="#Contact">Contact</a></li>
-          <li><a href="#Events">Events</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Dontate">Donate</a></li>
-        </ul>
-      </nav>
+    <section class="contact-page">
+      <header>
+        <nav>
+          <a href="/home.html">
+            <img
+              id="logo"
+              src="assets/img/burningman-logo.png"
+              alt="Burning Man Logo"
+            />
+          </a>
+
+          <input type="checkbox" id="toggle-nav" />
+          <label for="toggle-nav">
+            <i id="toggle-nav-btn-open" class="fas fa-bars"></i>
+            <i id="toggle-nav-btn-close" class="fas fa-times"></i>
+          </label>
+
+          <ul class="navbar">
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section id="contact-section">
+          <article class="contact-container">
+            <h1>Contact Us</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem
+            </p>
+            <form id="contact-form">
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Subject" />
+              <textarea
+                placeholder="Write why you’re contacting us (max of 2000 symbols)"
+                id="contact-message"
+                name="contact-message"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </article>
+        </section>
+      </main>
     </section>
-    <section id="contact">
-      <article id="contact-container">
-        <h1>Contact us</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem</p>
-        <form id="contact-form">
-          <input type="email" placeholder="Email"/>
-          <input type="text" placeholder="Subject"/>
-          <textarea placeholder="Message"></textarea>
-          <button>Send</button>
-      </article>
-    </section>
-    <footer>
-      <section id="footer-wrapper" class="content-width">
-        <p>© 1989-2024 BURNING MAN PROJECT</p>
-        <article id="footer-info">
-          <a href="">Privacy Policy</a>
-          <a href="">Terms of Service</a>
-        </article>
-      </section>
+
+    <section id="page-filler"></section>
+
+    <footer id="main-footer">
+      <div class="footer-content content-width">
+        <p>&copy; 1989-2024 BURNING MAN PROJECT</p>
+        <nav class="footer-nav">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

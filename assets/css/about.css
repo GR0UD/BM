@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Arial Black", sans-serif;
+}
+
+.content-width {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #888484;
+}
+
+#main-content {
+  margin: auto;
+  padding: 200px 10px;
+}
+
+/* Page Section */
+.slider-page {
+  display: flex;
+  min-height: 1400px;
+  flex-direction: column;
+  background-image: url("/assets/img/heros/about-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+/* Nav Section */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  gap: 25px;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  gap: 3.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+#logo {
+  height: 75px;
+}
+
+.navbar a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.navbar li a {
+  opacity: 1;
+}
+
+.navbar li a:hover {
+  opacity: 0.7;
+}
+
+.navbar li:nth-child(4) a {
+  padding: 1.3rem 3.5rem;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.navbar li:nth-child(4) a:hover {
+  background-color: white;
+  color: black;
+  outline: solid black;
+}
+
+#toggle-nav,
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  display: none;
+}
+
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  font-size: 4rem;
+}
+
+/* Slider Section */
+#slider-wrapper {
+  margin: auto;
+}
+
+.slider {
+  width: 1000px;
+  max-width: 1080px;
+  height: 650px;
+  margin: auto;
+  position: relative;
+}
+
+.slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+  gap: 250px;
+}
+
+.slider .list img {
+  object-position: bottom center;
+
+  width: 1000px;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: -50px;
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider .buttons button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.slider .dots {
+  position: absolute;
+  bottom: -7.5%;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li {
+  list-style: none;
+  width: 90px;
+  height: 17px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.slider .dots li.active {
+  background-color: #231f20;
+}
+
+/* Footer Section */
+#main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  background-color: #888484;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  background-color: #888484;
+}
+
+.footer-nav a {
+  color: #231f20;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .navbar {
+    position: absolute;
+    height: calc(100% - 98px);
+    opacity: 0;
+    width: 50%;
+    top: 100px;
+    left: -100%;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.275s ease-in-out;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .navbar li:nth-child(4) a {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ .navbar {
+    opacity: 1;
+    left: 0;
+  }
+
+  #toggle-nav-btn-open {
+    display: inline-block;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-open {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-close {
+    display: inline-block;
+  }
+  .slider {
+    width: 600px;
+    height: 400px;
+  }
+  .slider .dots {
+    bottom: -25%;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .slider .dots li {
+    list-style: none;
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+  }
+}

@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Arial Black", sans-serif;
+}
+
+.content-width {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: white;
+}
+
+#main-header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  gap: 25px;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  gap: 3.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+#logo {
+  height: 75px;
+}
+
+.navbar a {
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.navbar li a {
+  opacity: 1;
+}
+
+.navbar li a:hover {
+  opacity: 0.7;
+}
+
+.navbar li:nth-child(4) a {
+  padding: 1.3rem 3.5rem;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.navbar li:nth-child(4) a:hover {
+  background-color: white;
+  color: black;
+  outline: solid black;
+}
+
+#toggle-nav,
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  display: none;
+}
+
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  font-size: 4rem;
+}
+
+/* Hero Section */
+#events-hero {
+  display: flex;
+  min-height: 1700px;
+  flex-direction: column;
+  background-image: url("/assets/img/heros/hero2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  justify-content: space-between;
+}
+
+.hero-header {
+  margin: auto;
+  padding: 5rem;
+  background-color: rgba(247, 212, 245, 0.76);
+  border-radius: 100px;
+  max-width: 782px;
+  max-height: 353px;
+  img {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+/* Main Content Section */
+#main-content {
+  background-color: #50437e;
+  min-height: 150px;
+}
+
+.event-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 80px 20px;
+  gap: 40px;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(56, 56, 56, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.ticket img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.ticket-info {
+  height: 100%;
+  max-width: 300px;
+  color: white;
+}
+
+.ticket-info h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: "Berkshire Swash", cursive;
+}
+
+.ticket-info .ticket-price {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-family: "Arial Black", sans-serif;
+}
+
+.ticket-info .ticket-description {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.ticket-info .buy-ticket-btn {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: Bold;
+}
+
+.ticket-info .buy-ticket-btn:hover {
+  background-color: #ddd;
+}
+
+/* Footer Section */
+#main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  background-color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #231f20;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .navbar {
+    position: absolute;
+    height: calc(100% - 98px);
+    opacity: 0;
+    width: 50%;
+    top: 100px;
+    left: -100%;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.275s ease-in-out;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .navbar li:nth-child(4) a {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ .navbar {
+    opacity: 1;
+    left: 0;
+  }
+
+  #toggle-nav-btn-open {
+    display: inline-block;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-open {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-close {
+    display: inline-block;
+  }
+  .hero-header h1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    padding: 20px 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-header {
+    padding: 3rem;
+    max-width: 500px;
+    max-height: 250px;
+  }
+
+  .ticket {
+    flex-direction: column;
+  }
+
+  .ticket img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .ticket-info {
+    max-width: 100%;
+    padding: 0 2.5px;
+    margin: auto;
+    color: white;
+  }
+
+  .ticket-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .ticket-info .ticket-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .ticket-info .ticket-description {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  .ticket-info .buy-ticket-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+  }
+}
